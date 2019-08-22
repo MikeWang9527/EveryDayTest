@@ -13,6 +13,7 @@ public class Test_No350 {
      * @return
      */
     public int[] intersect(int[] nums1, int[] nums2) {
+        //map存放num1数组 然后和num2数组比较  相同则减1 代表匹配到一个 最后转化数组
         Map<Integer,Integer> map = new HashMap<>();
         for (int i = 0; i < nums1.length; i++) {
             if (map.containsKey(nums1[i])){

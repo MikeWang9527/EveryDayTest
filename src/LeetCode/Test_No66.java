@@ -17,7 +17,7 @@ public class Test_No66 {
      * @return
      */
     public int[] plusOne(int[] digits) {
-        //先确定几位数 如果长度是2 则是三位数
+        //需要考虑进位问题
         int length = digits.length;
         for (int i = length-1;i >= 0;i--) {
           digits[i]++;
