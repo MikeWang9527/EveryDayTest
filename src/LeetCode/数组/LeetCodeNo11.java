@@ -13,7 +13,7 @@ package LeetCode.数组;
  *
  * 解法: 双指针
  */
-public class LeetCodeNo12 {
+public class LeetCodeNo11 {
     //height 是Y轴列表
     public int maxArea(int[] height) {
         //横坐标的左端以及右端
