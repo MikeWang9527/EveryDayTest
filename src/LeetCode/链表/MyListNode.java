@@ -1,5 +1,9 @@
 package LeetCode.链表;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @Author MikeWang
  * @Date 2020/7/1 2:34 下午
@@ -41,5 +45,8 @@ public class MyListNode {
         MyListNode listNode = new MyListNode();
         ListNode init = listNode.init();
         listNode.print(init);
+        List list = new ArrayList();
+
     }
+
 }
