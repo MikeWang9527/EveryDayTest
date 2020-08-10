@@ -14,6 +14,7 @@ public class LeetCodeNo92 {
 
     //后驱节点
     ListNode successor = null;
+
     //反转以head为起点的n个节点,返回新的头结点
     public ListNode reverseN(ListNode head,int n){
         if (n==1){
