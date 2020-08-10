@@ -2,13 +2,13 @@ package LeetCode.链表;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @Author MikeWang
  * @Date 2020/7/1 2:34 下午
  */
 public class MyListNode {
+
     public ListNode head;
     public ListNode current;
 
