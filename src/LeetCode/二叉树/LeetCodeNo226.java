@@ -6,6 +6,7 @@ package LeetCode.二叉树;
  * 翻转一棵二叉树。
  */
 public class LeetCodeNo226 {
+
     public TreeNode invertTree(TreeNode root) {
         //终止条件,节点为空时返回
         if (root==null){
