@@ -4,18 +4,18 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 public class AQSTest {
 
-    private class Sync extends AbstractQueuedSynchronizer{
+    private class Sync extends AbstractQueuedSynchronizer {
 
 
         @Override
-        protected boolean tryAcquire(int arg){
+        protected boolean tryAcquire(int arg) {
             if (getExclusiveOwnerThread() == Thread.currentThread()) {
-            return true;
+                return true;
             }
-            if (compareAndSetState(0,1)){
+            if (compareAndSetState(0, 1)) {
                 setExclusiveOwnerThread(Thread.currentThread());
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
@@ -30,15 +30,15 @@ public class AQSTest {
 
     private Sync mSync;
 
-    public AQSTest(){
+    public AQSTest() {
         mSync = new Sync();
     }
 
-    public void lock(){
+    public void lock() {
         mSync.acquire(1);
     }
 
-    public void unLock(){
+    public void unLock() {
         mSync.release(1);
     }
 }

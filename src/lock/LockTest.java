@@ -9,9 +9,9 @@ public class LockTest {
     public static void main(String[] args) {
         try {
             lock.tryLock();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             lock.unlock();
         }
 

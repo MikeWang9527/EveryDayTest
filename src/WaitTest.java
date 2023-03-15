@@ -1,10 +1,10 @@
 public class WaitTest {
     public static void main(String[] args) throws InterruptedException {
-        final  Object obj = new Object();
+        final Object obj = new Object();
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (obj){
+                synchronized (obj) {
                     try {
                         obj.wait();
                         System.out.println("Thread 1 wake up.");
@@ -14,12 +14,12 @@ public class WaitTest {
                 }
             }
         });
-       thread1.start();
+        thread1.start();
 
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (obj){
+                synchronized (obj) {
                     obj.notifyAll();
                     try {
                         Thread.sleep(1000);
