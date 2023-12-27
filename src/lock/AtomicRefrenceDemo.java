@@ -6,13 +6,13 @@ public class AtomicRefrenceDemo {
 
     public static void main(String[] args) {
 
-        User z3 = new User("张三",22);
-        User l4 = new User("李四",23);
+        User z3 = new User("张三", 22);
+        User l4 = new User("李四", 23);
 
         AtomicReference<User> atomicReference = new AtomicReference<>();
         atomicReference.set(z3);
-        System.out.println(atomicReference.compareAndSet(z3,l4)+"\t"+atomicReference.get().toString());
-        System.out.println(atomicReference.compareAndSet(z3,l4)+"\t"+atomicReference.get().toString());
+        System.out.println(atomicReference.compareAndSet(z3, l4) + "\t" + atomicReference.get().toString());
+        System.out.println(atomicReference.compareAndSet(z3, l4) + "\t" + atomicReference.get().toString());
 
     }
 

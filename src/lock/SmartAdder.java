@@ -9,20 +9,20 @@ public class SmartAdder {
     private volatile int counter;
     private AQSTest lock;
 
-    public SmartAdder(){
+    public SmartAdder() {
         lock = new AQSTest();
     }
 
-    public void increase(){
+    public void increase() {
         lock.lock();
         try {
             counter++;
-        }finally {
+        } finally {
             lock.unLock();
         }
     }
 
-    public int getCounter(){
+    public int getCounter() {
         return this.counter;
     }
 
@@ -33,7 +33,7 @@ public class SmartAdder {
         CountDownLatch countDownLatch = new CountDownLatch(threadCount);
         ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
         for (int i = 0; i < threadCount * 2; i++) {
-            executorService.submit(()->{
+            executorService.submit(() -> {
                 for (int j = 0; j < addCount; j++) {
                     smartAdder.increase();
                 }
@@ -42,10 +42,10 @@ public class SmartAdder {
         }
         try {
             countDownLatch.await();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("count:"+smartAdder.getCounter());
+        System.out.println("count:" + smartAdder.getCounter());
         executorService.shutdown();
     }
 }
