@@ -14,6 +14,6 @@ public class StaticTest {
         short s1 =5;
         short s2 = 7;
         //short s3 = s1+s2; //编译报错 int转short
-        returnShort(s1+s2);
+        returnShort((short) (s1+s2));
     }
 }
