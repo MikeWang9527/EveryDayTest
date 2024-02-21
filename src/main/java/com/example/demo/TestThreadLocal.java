@@ -1,3 +1,5 @@
+package com.example.demo;
+
 public class TestThreadLocal {
 
     private static final ThreadLocal<Integer> value = new ThreadLocal<Integer>() {

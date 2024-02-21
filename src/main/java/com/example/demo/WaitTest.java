@@ -1,3 +1,5 @@
+package com.example.demo;
+
 public class WaitTest {
     public static void main(String[] args) throws InterruptedException {
         final Object obj = new Object();
